@@ -19,3 +19,14 @@ const t1 = performance.now()
   document.body.appendChild(mydiv)
   const t4 = performance.now();
    console.log("Total time by code1 : " +(t4-t3));
+
+   
+   //best code
+   let fragment = document.createDocumentFragment();
+
+   for(let i=1;i<=10;i++){
+    let para = document.createElement('p');
+    para.textContent ="This is my cycle"+i;
+    fragment.appendChild(para);
+   }
+Document.body.appendChild(fragment);
